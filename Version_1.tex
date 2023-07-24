@@ -125,7 +125,7 @@ $\overline{e^z}=e^{\overline{z}}$ (z.B. $\overline{e^{ix}}=e^{-ix}$)
 %  Kapitel 2
 \section{Folgen \& Reihen}
 \subsection{Grenzwert}
-\begin {defbox}{Definition Grenzwert: } $a \in \R $ ein Grenzwert von $(a_n)_{n\in \mathbb{N}};\\ \exists \epsilon > 0, \exists \text{N} \in \mathbb{N}, \text{ sodass } |a_n-a|<\epsilon, \forall n \in N $ 
+\begin {defbox}{Definition Grenzwert: } $a \in \R $ ein Grenzwert von $(a_n)_{n\in \mathbb{N}};\\ \forall \epsilon > 0, \exists \text{N} \in \mathbb{N}, \text{ sodass } |a_n-a|<\epsilon, \forall n \in N $ 
 \end {defbox}
 \begin{defbox}{Definition: Folge} Eine Folge reeller Zahlen (bzw. komplexer Zahlen) ist eine Abbildung $\mathbb{N} \longrightarrow \mathbb{R} $ (bzw. $\mathbb{N}\longrightarrow\mathbb{C}$)
 $(a_n)_{n\in \mathbb{N}}=(a_1,a_2,a_3,...,a_n)=$n-tes Folgeglied
@@ -241,10 +241,10 @@ Sei $(a_n)$ eine Folge reeller Zahlen $a_n\longrightarrow l  \in \mathbb R \iff 
         \end{bembox}
     \end{enumerate}
 \end{tipbox}
-\begin{bembox}{Bemerkung}
-$a_n=1+\frac{1}{2^3}+\frac{1}{3^3}+...+\frac{1}{n^3}$ konvergiert; ob $\lim(a_n)$ etwas mit $\pi$ zu tun hat weiss man \underline{nicht}!
+% \begin{bembox}{Bemerkung}
+% $a_n=1+\frac{1}{2^3}+\frac{1}{3^3}+...+\frac{1}{n^3}$ konvergiert; ob $\lim(a_n)$ etwas mit $\pi$ zu tun hat weiss man \underline{nicht}!
     
-\end{bembox}
+% \end{bembox}
 
 \subsection{Satz Bolzano-Weierstrass}
 
@@ -433,7 +433,7 @@ Jede \underline{beschränkte} Folge hat mindestens eine konvergent Teilfolge (z.
 \end{bembox}
 \begin{defbox}
     {Definition: $\exp(z)$}
-    Sei $z\in\mathbb C$: $e^z=\exp(z)\sum_{n=0}^{+\infty}\dfrac{z^n}{n!}$
+    Sei $z\in\mathbb C$: $e^z=\exp(z)=\sum_{n=0}^{+\infty}\dfrac{z^n}{n!}$
 \end{defbox}
 \begin{defbox}
     {Definition: Potenzreihen}
@@ -481,14 +481,14 @@ Jede \underline{beschränkte} Folge hat mindestens eine konvergent Teilfolge (z.
     {Satz 2.7.26: Rechnen konvergenten Reihen}
     Falls $\sum_{m=0}^{+\infty}x_m,\ \sum_{n=0}^{+\infty}y_n$ absolut konvergente Reihen mit $x_m,\ y_n\in \mathbb C$ sind, ist $$(\displaystyle\sum_{m=0}^{+\infty}x_m)(\displaystyle\sum_{n=0}^{+\infty}y_n)= \displaystyle\sum_{n=0}^{+\infty}(\displaystyle\sum_{m=0}^{n}x_{n-m}\cdot y_m)$$
 \end{tbox}
-\begin{bembox}
-    {Notation: $\exp{(z)}$}
-    $\exp{(z)}=e^z,\ z\in \mathbb C$
-\end{bembox}
-\begin{tbox}
-    {Satz: Addition von $\exp$}
-    $\exp(z+w)=\exp(z)+\exp(w)$, für $z,w\in \mathbb C$
-\end{tbox}
+% \begin{bembox}
+%     {Notation: $\exp{(z)}$}
+%     $\exp{(z)}=e^z,\ z\in \mathbb C$
+% \end{bembox}
+% \begin{tbox}
+%     {Satz: Addition von $\exp$}
+%     $\exp(z+w)=\exp(z)+\exp(w)$, für $z,w\in \mathbb C$
+% \end{tbox}
 \subsection{Konvergenz Komplexer Folgen}
     $(z_n)_{n\in\mathbb N}$ komplexe Folge $z_n=a_n+ib_n$; $(a_n)_{n\in\mathbb N},\ (b_n)_{n\in\mathbb N}$ reelle Folgen
     \\$(z_n)$ konvergiert $\iff a_n$ \& $b_n$ konvergent
@@ -577,10 +577,10 @@ Jede \underline{beschränkte} Folge hat mindestens eine konvergent Teilfolge (z.
         \item $\implies f(I) = J$ in Intervall, $f:I\longrightarrow J$ ist \underline{bijektiv}, und die Umkehrsabbildung $f^{-1}$: $J\longrightarrow I\subset \mathbb R$ ist stetig, und streng monoton [$f^{-1}$ wachsend $\iff f$ wachsend]
     \end{itemize}
 \end{tbox}
-\begin{bembox}
-    {Notation: $x^\alpha$ zu $\exp$}
-    $x^\alpha=\exp(\alpha\cdot\log(x))$ für $x>0,\ \alpha\in\mathbb R$
-\end{bembox}
+% \begin{bembox}
+%     {Notation: $x^\alpha$ zu $\exp$}
+%     $x^\alpha=\exp(\alpha\cdot\log(x))$ für $x>0,\ \alpha\in\mathbb R$
+% \end{bembox}
 \subsection{Reelle Exponentialfunktion}
 Verteilt in anderen Kapiteln
 \subsection{Funktionenfolgen}
@@ -594,7 +594,7 @@ Verteilt in anderen Kapiteln
     \begin{enumerate}
         \item \underline{Punktweise Konvergenz}: $f$, sodass $\forall x\in D:\lim_{n\to \infty}(f_n(x))=f(x)$
         \\ Genau dann wenn $(f_n)_{n\in\mathbb N}$ konvergiert gegen $f$ punktweise falls $\forall x\in D, \forall \epsilon>0,\exists N \in \mathbb N, \forall n \ge N, |f_n(x)-f(x)|<\epsilon$
-        \item \underline{Gleichmässige Konvergenz}: $(f_n)_n$ konvergiert gleichmässig gegen $f$, wenn $\forall \epsilon>0,\exists N \in \mathbb N, \forall n \ge N, |f_n(x)-f(x)|\epsilon, \forall x\in D$
+        \item \underline{Gleichmässige Konvergenz}: $(f_n)_n$ konvergiert gleichmässig gegen $f$, wenn $\forall \epsilon>0,\exists N \in \mathbb N, \forall n \ge N, |f_n(x)-f(x)|<\epsilon, \forall x\in D$
         \item \underline{Implikation}: Gleichmässige Konvergenz impliziert Punktweise Konvergenz
     \end{enumerate}
 \end{defbox}
@@ -648,6 +648,15 @@ Verteilt in anderen Kapiteln
     $\sin{(2z)}=2\sin{(z)}\cos{(z)}$
     \\ $\cos{(2z)}=cos{(z)}^2-\sin{(z)}^2$
 \end{tbox}
+\begin{bembox}
+    {Bemerkung: Eigenschaften $\sin \&  \cos$}
+    \begin{itemize}
+        \item $\sin^2(t)+\cos^2(t)=1;\forall t \in \mathbb R \implies sin(t)=\pm \sqrt{1-cos^2(t)}, + \text{ wenn } \sin(t)\ge 0, - \text{ wenn } \sin(t)<0$
+        \item $\cos(\arccos(x))=x; \forall x \in [-1,1]$
+        \item $\arccos(\cos(x))=x$ \underline{nur} wenn $x\in[0,\pi]$
+        \item Inverse von vom Bild von $\sin$ ist $\arcsin: [-1,1]\longrightarrow[-\frac{\pi}{2},\frac{\pi}{2}]$ und differenzierbar in $]-1,1[$
+    \end{itemize}
+\end{bembox}
 \begin{tbox}
     {Satz 3.9.1: Eigenschaften Sinusfunktion}
     \begin{enumerate}
@@ -657,10 +666,10 @@ Verteilt in anderen Kapiteln
         \item $e^{i\pi}=-1$
     \end{enumerate}
 \end{tbox}
-\begin{tbox}
-    {Korollar: Bild von $\sin \& \cos$}
-    Bild von $\cos$ auf $[0,\pi]$ und $\sin$ auf $[-\frac{\pi}{2},\frac{\pi}{2}]$ ist $[-1,1]$
-\end{tbox}
+% \begin{tbox}
+%     {Korollar: Bild von $\sin \& \cos$}
+%     Bild von $\cos$ auf $[0,\pi]$ und $\sin$ auf $[-\frac{\pi}{2},\frac{\pi}{2}]$ ist $[-1,1]$
+% \end{tbox}
 \subsection{Grenzwerte von Funktionen}
 \begin{tbox}
     {Kriterium: Konvergenz einer Funktion}
@@ -701,11 +710,11 @@ Verteilt in anderen Kapiteln
     \end{enumerate}
 \end{tbox}
 \begin{bembox}
-    {Differenzierbarkeit \& Stetigkeit}
+    {Differenzierbarkeit $\implies$ Stetigkeit}
     $f$ differenzierbar $\implies f$ stetig
 \end{bembox}
 \begin{tbox}
-    {Ableitungen $\exp, \sin, \cos$}
+    {Differenzierbarkeit $\exp, \sin, \cos$}
     $\exp, \sin, \cos, \log, \arcsin, \arccos, \arctan, \tan$ sind auf $\mathbb R$ differenzierbar mit 
     \\ $\exp'=\exp, \sin'=\cos, \cos'=-\sin$
 \end{tbox}
@@ -774,15 +783,6 @@ Verteilt in anderen Kapiteln
         \item Falls $\exists M\in[0,+\infty[$ mit $\forall x \ |f'(x)|\le M\implies \forall x, \forall y, |f(y)-f(x)|\le M|x-y|$
     \end{enumerate}
 \end{tbox}
-\begin{bembox}
-    {Bemerkung: Eigenschaften $\sin \&  \cos$}
-    \begin{itemize}
-        \item $\sin^2(t)+\cos^2(t)=1;\forall t \in \mathbb R \implies sin(t)=\pm \sqrt{1-cos^2(t)}, + \text{ wenn } \sin(t)\ge 0, - \text{ wenn } \sin(t)<0$
-        \item $\cos(\arccos(x))=x; \forall x \in [-1,1]$
-        \item $\arccos(\cos(x))=x$ \underline{nur} wenn $x\in[0,\pi]$
-        \item Inverse von vom Bild von $\sin$ ist $\arcsin: [-1,1]\longrightarrow[-\frac{\pi}{2},\frac{\pi}{2}]$ und differenzierbar in $]-1,1[$
-    \end{itemize}
-\end{bembox}
 \begin{defbox}
     {Definition: Tangesfunktion}
     $\tan=\dfrac{\sin(x)}{\cos(x)}$. Definiert für $\forall x$, sodass $\cos(x)\neq 0 \ (x\neq \frac{\pi}{2}+k\pi, \ k\in \mathbb Z)$
@@ -944,7 +944,7 @@ Verteilt in anderen Kapiteln
 \end{tbox}
 \begin{tbox}
     {Satz 5.2.7: Stetigkeit $\implies$ Integrierbarkeit}
-    Jedes $f:[a,b]\longrightarrow \mathbb R$ die \underline{stetig} ist, ist \underline{integrierbar}.
+    Jedes $f:[a,b]\longrightarrow \mathbb R$ die \underline{stetig} ist, ist \underline{integrierbar} und $\displaystyle\int_a^bf(x) \ dx=\lim \frac 1N\sum_{n=0}^{N-1}f(a+n\frac{b-1}N)$.
 \end{tbox}
 \begin{tbox}
     {Satz 5.2.6: Gleichmässige Stetigkeit}
