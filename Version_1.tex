@@ -393,6 +393,10 @@ Jede \underline{beschränkte} Folge hat mindestens eine konvergent Teilfolge (z.
         \end{itemize}
     \end{enumerate}
 \end{tbox}
+\begin{defbox}
+    {Definition: Zeta-Funktion}
+    $\sum_{n=1}^\infty \dfrac{1}{n^s}$ divergiert für $s\le 1$ und konvergiert für $s>1$.
+\end{defbox}
 \begin{tipbox}
     {Intuition: Konvergenz von Reihen}
     $\sum_{n=0}^{+\infty}x_n$ konvergiert wenn $ (x_n)$ konvergiert $"$schnell genug$"$ gegen $0$.
@@ -433,7 +437,8 @@ Jede \underline{beschränkte} Folge hat mindestens eine konvergent Teilfolge (z.
 \end{bembox}
 \begin{defbox}
     {Definition: $\exp(z)$}
-    Sei $z\in\mathbb C$: $e^z=\exp(z)=\sum_{n=0}^{+\infty}\dfrac{z^n}{n!}$
+    Sei $z\in\mathbb C$: $e^z=\exp(z)=\sum_{n=0}^{+\infty}\dfrac{z^n}{n!}$ \\
+     $e^x>= x+1$
 \end{defbox}
 \begin{defbox}
     {Definition: Potenzreihen}
@@ -454,7 +459,7 @@ Jede \underline{beschränkte} Folge hat mindestens eine konvergent Teilfolge (z.
 \end{tbox}
 \begin{defbox}
     {Definition 3.7.10: Konvergenzradius}
-    Die Potenzreihe $\sum_{n=0}^{+\infty}x_nz^n$ hat \underline{positiven} Konvergenzradius,\\
+    Die Potenzreihe $\sum_{n=0}^{+\infty}c_nz^n$ hat \underline{positiven} Konvergenzradius,\\
     falls $\limsup_{n\to\infty}\sqrt[n]{|c_n|}$ exisitiert.    
     $$r=
     \begin{cases}
@@ -543,6 +548,7 @@ Jede \underline{beschränkte} Folge hat mindestens eine konvergent Teilfolge (z.
 \begin{tbox}
     {Satz 3.3.1: Zwischenwertsatz}
     Sei $I\subset \mathbb R$ ein \underline{Intervall}, und $f:I\longrightarrow \mathbb R$ \underline{stetig}. Für alle $a<b$ in $I$, und für alle zwischen $f(a)$ \& $f(b)$, gibt es (mindestens ein $x_0\in [a,b]$ mit $f(x_0)=y$. D.h. das Bild $f(I)$ von $f$ ist ein Intervall in $\mathbb R$
+    \\ \textbf{Def 2:} Sei $f:[a,b]\rightarrow \R$ stetig und in $]a,b[$ differenzierbar. Dann gibt es gibt $x_0\in]a,b[$ mit $f(a)-f(b)=f'(x_0)(b-a)$
 \end{tbox}
 \begin{tbox}
     {Korollar 3.3.2: Nullstellen \& Polynome}
@@ -643,11 +649,11 @@ Verteilt in anderen Kapiteln
     {Satz 3.8.2: Euler $e^{ix}$}
     $x\in \mathbb R; e^{ix}=\cos(x)+i\cdot sin(x)$
 \end{tbox}
-\begin{tbox}
-    {Korollar 3.8.3: Winkelverdopplungsformeln}
-    $\sin{(2z)}=2\sin{(z)}\cos{(z)}$
-    \\ $\cos{(2z)}=cos{(z)}^2-\sin{(z)}^2$
-\end{tbox}
+% \begin{tbox}
+%     {Korollar 3.8.3: Winkelverdopplungsformeln}
+%     $\sin{(2z)}=2\sin{(z)}\cos{(z)}$
+%     \\ $\cos{(2z)}=cos{(z)}^2-\sin{(z)}^2$
+% \end{tbox}
 \begin{bembox}
     {Bemerkung: Eigenschaften $\sin \&  \cos$}
     \begin{itemize}
@@ -713,11 +719,11 @@ Verteilt in anderen Kapiteln
     {Differenzierbarkeit $\implies$ Stetigkeit}
     $f$ differenzierbar $\implies f$ stetig
 \end{bembox}
-\begin{tbox}
-    {Differenzierbarkeit $\exp, \sin, \cos$}
-    $\exp, \sin, \cos, \log, \arcsin, \arccos, \arctan, \tan$ sind auf $\mathbb R$ differenzierbar mit 
-    \\ $\exp'=\exp, \sin'=\cos, \cos'=-\sin$
-\end{tbox}
+% \begin{tbox}
+%     {Differenzierbarkeit $\exp, \sin, \cos$}
+%     $\exp, \sin, \cos, \log, \arcsin, \arccos, \arctan, \tan$ sind auf $\mathbb R$ differenzierbar mit 
+%     \\ $\exp'=\exp, \sin'=\cos, \cos'=-\sin$
+% \end{tbox}
 \begin{tbox}
     {Umkehrfunktion ableiten}
         $f:I\longrightarrow J; \ I,J$ Intervalle in $\mathbb R$
@@ -766,7 +772,7 @@ Verteilt in anderen Kapiteln
     \end{enumerate}
 \end{tbox}
 \begin{tbox}
-    {Korollar: Position Min/Max}
+    {Satz 4.2.3 + Vorlesung: Position Min/Max}
     $f: [a,b]\longrightarrow \mathbb R$; Falls $f$ auf $[a,b]$ differenzierbar ist, d.h. auch stetig, dann kann das max/min von $f$ nur an $x_0\in{a,b}$ oder $f'(x_0)=0$ sein.
 \end{tbox}
 \begin{tbox}
@@ -789,14 +795,14 @@ Verteilt in anderen Kapiteln
     \\ $\tan'(x)=\dfrac{1}{\cos^2(x)}=1+\tan^2(x)>0$; $\tan(-x)=-\tan(x)$
     
 \end{defbox}
-\begin{defbox}
-    {Definition: $\arctan$}
-    \begin{itemize}
-        \item $\arctan$ differenzierbar in $\mathbb R$,
-        \\ weil $\tan'(x)=1+\tan^2(x)>0$
-        \item $\arctan'(x)=\dfrac{1}{1+x^2}$
-    \end{itemize}
-\end{defbox}
+% \begin{defbox}
+%     {Definition: $\arctan$}
+%     \begin{itemize}
+%         \item $\arctan$ differenzierbar in $\mathbb R$,
+%         \\ weil $\tan'(x)=1+\tan^2(x)>0$
+%         \item $\arctan'(x)=\dfrac{1}{1+x^2}$
+%     \end{itemize}
+% \end{defbox}
 \subsection{Höhere Ableitungen}
 \begin{defbox}
     {Definition 4.3.1: n-te Ableitungen}
@@ -847,10 +853,10 @@ Verteilt in anderen Kapiteln
 \begin{tbox}
     {Satz 4.4.2 \& Korollar 4.4.3: Ableitung Folge}
     Sei $(a_n)_{n\ge 0}$ eine Folge von reellen Zahlen, sodass die Potenzreihe $\sum_{n=0}^{+\infty}a_n x^n= a_0+a_1x+a_2x^2+...$ hat Konvergenzradius $r>0$ ($r=+\infty$ erlaubt)
-    \\ Dann ist die Funktion $f(x)=a_0+a_1x+...+a_nx^n+...$ für $]-r,r[$ differenzierbar mit $f'(x)=0+a_1+2a_2x+...+na_nx^{n-1}+...$ ($f$ wie ein Polynom vom Grad $+\infty)$. Konvergenzradius auch $r$
+    \\ Dann ist die Funktion $f(x)=a_0+a_1x+...+a_nx^n+...$ für $]-r,r[$ differenzierbar mit $f'(x)=0+a_1+2a_2x+...+na_nx^{n-1}+... := f^{(j)}(x)=\sum_{k=j}^{\inf}c_k\frac{k!}{(k-j)!}(x-x_0)^{k-1}$ ($f$ wie ein Polynom vom Grad $+\infty)$. Konvergenzradius auch $r$
 \end{tbox}
 \begin{tbox}
-    {Korollar: Potenzreihe ableitung}
+    {Korollar 4.4.3: Potenzreihe ableitung}
     $f:\ ]-r,r[\longrightarrow \mathbb R \ (r>0)$ ist die Summe einer Potenzreihe $\sum_{n=0}^{+\infty}a_nx^n$, sind die Koeffizienten $a_n$ eindeutig: $a_n=\dfrac{f^{(n)}(0)}{n!}$
 \end{tbox}
 \begin{bembox}
@@ -871,7 +877,7 @@ Verteilt in anderen Kapiteln
     Taylor Polynom der Ordnung $n$ ist eine gute Approximation für $f(x)$ wenn $|x-x_0|$ $"$klein$"$ ist, falls $f^{(n+1)}$ nicht zu gross ist.
 \end{tipbox}
 \begin{tbox}
-    {Korollar 4.4.8: }
+    {Korollar 4.4.8: Folgerung 2-mal differenzierbar}
     $a<x_0<b;\ f:]a,b[\longrightarrow \mathbb R,$ 2-mal \underline{stetig differenzierbar}. Falls $f'(x_0)=0$, $ f''(x_0) \neq 0$:
     \begin{enumerate}
         \item wenn $f''(x_0)>0$, hat $f$ ein lokales Minimum an $x_0$
@@ -929,6 +935,13 @@ Verteilt in anderen Kapiteln
     \end{cases}$
     integrierbar ist, ist das Integral die "Wahrscheinlichkeit das eine Zahl $x\in[0,1]$ gehört $A"$.
 \end{bembox}
+\begin{defbox}
+% nicht in Vorlesung gewesen
+    {Def. Stirlingformel}
+    $n!\sim \sqrt{2\pi n} (\frac{n}{e})^n, \ n\to\infty$
+\end{defbox}
+
+
 \subsection{Integrierbare Funktionen}
 \begin{tbox}
     {Satz 5.2.1: Integrierbarkeit von kombinierten Funktionen}
@@ -994,7 +1007,7 @@ Verteilt in anderen Kapiteln
     {Sonderfälle von Substitution}
     \begin{enumerate}
         \item $\int_a^b f(cx)\ dx=\frac 1 c\int_{ca}^{cb}f(y)\ dy$ für jede $f,c\neq 0$
-        \item $\int^b_a f(x+x)\ dx
+        \item $\int^b_a f(x+c)\ dx
         \\=\int_{a+c}^{b+c}f(y)\ dy \ (c\in \R)
             \begin{cases}
             y=x+c\\
@@ -1031,13 +1044,14 @@ Verteilt in anderen Kapiteln
     {Satz 5.8.5}
     $f:[1,+\infty\longrightarrow[0,+\infty[;$ monoton \underline{fallend}. Die Reihe $\sum_{n=1}^{+\infty} f(n)$ konvergiert $\iff \int_1^{+\infty} f(x)\ dx$ konvergiert.
 \end{tbox}
-\subsection{Unbestimmtes Integral}
-\begin{defbox}
-    {Partielle Integration vs. Substitution}
-    \begin{itemize}
-        \item Part. Int.: 
-    \end{itemize}
-\end{defbox}
+% \subsection{Unbestimmtes Integral}
+% \begin{defbox}
+%     {Partielle Integration vs. Substitution}
+%     \begin{itemize}
+%         \item Part. Int.: 
+%     \end{itemize}
+% \end{defbox}
+\section{Wichtige Werte}
 \begin{tipbox}
 {Wichtige Werte}
 \begin{center} 
@@ -1051,10 +1065,99 @@ Verteilt in anderen Kapiteln
  \end{tabular}
 \end{center}
 \end{tipbox}
+\subsubsection{Periodizität}
+\begin{itemize}
+    \item $\sin(\alpha + 2 \pi) = \sin(\alpha) \quad \bullet \cos(\alpha + 2 \pi) = \cos(\alpha)$
+    \item $\tan(\alpha + 2 \pi) = \tan(\alpha)$
+\end{itemize}
 
-\begin{center}
-    \includegraphics[width=\linewidth]{unit_cirlce.png}
+\subsubsection{Parität}
+\begin{itemize}
+    \item $\sin(-\alpha) = - \sin(\alpha) \quad \bullet \cos(-\alpha) = \cos(\alpha)$
+    \item $\tan(-\alpha) = - \tan(\alpha)$
+\end{itemize}
+
+\subsubsection{Ergänzung}
+\begin{itemize}
+    \item $\sin(\pi - \alpha) = \sin(\alpha) \quad \bullet \cos(\pi - \alpha) = \cos(\alpha)$
+    \item $\tan(\pi - \alpha) = -\tan(\alpha)$
+\end{itemize}
+
+\subsubsection{Komplemente}
+\begin{itemize}
+    \item $\sin(\dfrac\pi 2 - \alpha) = \cos(\alpha) \quad \bullet \cos(\dfrac\pi 2 - \alpha) = \sin(\alpha)$
+    \item $\tan(\dfrac \pi 2 - \alpha) = -\tan(\alpha)$
+\end{itemize}
+
+\subsubsection{Doppelwinkel}
+\begin{itemize}
+    \item $\sin(2\alpha) = 2\sin(\alpha)\cos(\alpha)$
+    \item $\cos(2\alpha) = \cos^2(\alpha) - \sin^2(\alpha) = 1-2\sin^2(\alpha)$
+    \item $\tan(2 \alpha) = \dfrac{2\tan(\alpha)}{1-\tan^2(\alpha)}$
+\end{itemize}
+
+\subsubsection{Addition}
+\begin{itemize}
+    \item $\sin(\alpha + \beta) = \sin(\alpha)\cos(\beta) + \cos(\alpha)\sin(\beta)$
+    \item $\cos(\alpha + \beta) = \cos(\alpha)\cos(\beta) - \sin(\alpha)\sin(\beta)$
+    \item $\tan(\alpha + \beta) = \dfrac{\tan(\alpha) + \tan(\beta)}{1- \tan(\alpha)\tan(\beta)}$
+\end{itemize}
+
+\subsubsection{Subtraktion}
+\begin{itemize}
+    \item $\sin(\alpha - \beta) = \sin(\alpha)\cos(\beta) - \cos(\alpha)\sin(\beta)$
+    \item $\cos(\alpha - \beta) = \cos(\alpha)\cos(\beta) + \sin(\alpha)\sin(\beta)$
+    \item $\tan(\alpha-\beta) = \dfrac{\tan(\alpha)- \tan(\beta)}{1 + \tan(\alpha) \tan(\beta)}$
+\end{itemize}
+
+\subsubsection{Multiplikation}
+\begin{itemize}
+    \item $\sin(\alpha)\sin(\beta) = - \dfrac{\cos(\alpha + \beta)- \cos(\alpha - \beta)}{2}$
+    \item $\cos(\alpha)\cos(\beta) = \dfrac{\cos(\alpha + \beta) + \cos(\alpha - \beta)}{2}$
+    \item $\sin(\alpha)\cos(\beta) = \dfrac{\sin(\alpha + \beta) + \sin(\alpha -\beta)}{2}$
+\end{itemize}
+
+\subsubsection{Potenzen}
+\begin{itemize}
+    \item $\sin^2(\alpha) = \dfrac1 2 (1-\cos(2\alpha))$
+    \item $\cos^2(\alpha) = \dfrac 1 2 (1 + \cos(2\alpha))$
+    \item $\tan^2(\alpha) = \dfrac{1-\cos(2\alpha)}{1+\cos(2\alpha)}$
+\end{itemize}
+
+\subsubsection{Diverse}
+\begin{itemize}
+    \item $\sin^2(\alpha) + \cos^2(\alpha) = 1$
+    \item $\sin(z) = \dfrac{e^{iz}-e^{-iz}}{2} \quad \bullet \cos(z) = \dfrac{e^{iz} + e^{-iz}}{2}$
+\end{itemize}
+% \begin{center}
+%     \includegraphics[width=\linewidth]{unit_cirlce.png}
+% \end{center}
+\begin{defbox}
+    {Zeta-Funktion}
+    $f(x)=\sum_{n=1}^\infty \dfrac{1}{n^s}$ divergiert für $s\le 1$ und konvergiert für $s>1$
+\end{defbox}
+\begin{tipbox}
+{Arctan Werte}
+\begin{center} 
+ \begin{tabular}{c|cccc}
+  deg & 0° & 30° & 45° & 60°\\
+  \midrule
+  x & 0 & $\frac{1}{3}\sqrt{3}$ & $1$ & $\sqrt{3}$ \\
+  arctan(x) & 0 & $\frac{\pi}{6}$ & $\frac{\pi}{4}$ & $\frac{\pi}{3}$ \\
+  
+ \end{tabular}
 \end{center}
+\end{tipbox}
+\begin{tbox}
+    {$\log$ Rechenregeln}
+    $\log_a (u\cdot v)=\log_a(u)+\log_a(v)$\\
+    $\log_a(\frac{u}{v})=\log_a(u)-\log_b(v)$
+\end{tbox}
+\begin{tbox}
+    {Umkehrfunktion Hilfe}
+    $f(f^{-1}(x))=x$\\
+    $(f^{-1})'(x)=\dfrac{1}{f'(f^{-1}(x))}$
+\end{tbox}
 \section{Tabellen}
 \subsection{Grenzwerte}
 \begin{center}
@@ -1109,6 +1212,7 @@ Verteilt in anderen Kapiteln
   $x(\ln |x| - 1)$ & $\ln |x|$ & $\frac{1}{x}$ \\
   $\frac{1}{2}(\ln(x))^2$ & $\frac{\ln(x)}{x}$ & $\frac{1 - \ln(x)}{x^2}$ \\
   $\frac{x}{\ln(a)} (\ln|x| -1)$ & $\log_a |x|$ & $\frac{1}{\ln(a)x}$ \\
+  $ln(|\frac 1 x -1|)$ & $\frac 1 {x^2-x}$& $-\frac{2x-1}{(x^2-x)^2}$ \\
   \bottomrule
   \end{tabularx}
 \end{center}
